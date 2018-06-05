@@ -8,7 +8,7 @@ class LongUtilsTest extends FlatSpecLike with Matchers {
   "The bitcount of a long" should "be equals to the number of bits equal to 1" in { 
     LongUtils.bitCount(0L) shouldBe 0
     LongUtils.bitCount(Long.MaxValue) shouldBe 63
-    LongUtils.bitCount(3) shouldBe 1
+    LongUtils.bitCount(3L) shouldBe 2
   }
   
   "The number of leading zeros" should "be the number of zeros before the first 1 bit" in {
