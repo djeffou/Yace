@@ -71,13 +71,6 @@ object LongUtils {
   }
 
   def bitCount(i: Long): Int = {
-    var j = i 
-    j = j - ((j >>> 1) & 0x5555555555555555L)
-    j = (j & 0x3333333333333333L) + ((j >>> 2) & 0x3333333333333333L)
-    j = (j + (j >>> 4)) & 0x0f0f0f0f0f0f0f0fL
-    j = j + (j >>> 8)
-    j = j + (j >>> 16)
-    j = j + (j >>> 32)
-    j.toInt & 0x7f
+    java.lang.Long.bitCount(i)
   }
 }

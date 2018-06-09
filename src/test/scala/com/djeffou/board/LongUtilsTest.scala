@@ -9,7 +9,7 @@ class LongUtilsTest extends FlatSpecLike with Matchers {
     LongUtils.bitCount(0L) shouldBe 0
     LongUtils.bitCount(Long.MaxValue) shouldBe 63
     LongUtils.bitCount(3L) shouldBe 2
-  }
+  } 
   
   "The number of leading zeros" should "be the number of zeros before the first 1 bit" in {
     LongUtils.numberOfLeadingZeros(Mask.EMPTY) shouldBe 64
